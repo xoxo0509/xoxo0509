@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>진학 자료 허브</title>
+<style>
+  :root {
+    --bg: #121821;
+    --surface: #1a2330;
+    --surface-hover: #212c3b;
+    --border: #2e3b4c;
+    --text: #eceff3;
+    --text-dim: #94a1b0;
+    --accent: #e3b23c;
+    --accent-dim: #8a6b23;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+    font-weight: 700;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 56px 20px 80px;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 720px;
+  }
+
+  header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 20px;
+    margin-bottom: 36px;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    margin: 0 0 8px;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin: 0 0 10px;
+    color: var(--text);
+  }
+
+  .meta {
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .meta a {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .meta a:hover { color: var(--accent); }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px 22px;
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+
+  .row:hover, .row:focus-visible {
+    background: var(--surface-hover);
+    border-color: var(--accent-dim);
+    outline: none;
+  }
+
+  .row:focus-visible {
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+
+  .row-main {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .row-title {
+    font-size: 17px;
+    color: var(--text);
+  }
+
+  .row-file {
+    font-size: 13px;
+    color: var(--text-dim);
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .row-go {
+    flex-shrink: 0;
+    font-size: 13px;
+    color: var(--accent);
+    border: 1px solid var(--accent-dim);
+    border-radius: 4px;
+    padding: 6px 12px;
+  }
+
+  footer {
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  footer a {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 24px; }
+    .row { flex-direction: column; align-items: flex-start; }
+    .row-go { align-self: flex-end; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <p class="eyebrow">xoxo0509</p>
+      <h1>진학 자료 허브</h1>
+      <p class="meta">업로드한 웹앱 모음 · <a href="https://github.com/xoxo0509/xoxo0509">저장소 코드 보기</a></p>
+    </header>
+
+    <div class="list">
+      <a class="row" href="./2027susi.html">
+        <span class="row-main">
+          <span class="row-title">2027 수시지원 최종 분석</span>
+          <span class="row-file">2027susi.html</span>
+        </span>
+        <span class="row-go">열기</span>
+      </a>
+
+      <a class="row" href="./compsss.html">
+        <span class="row-main">
+          <span class="row-title">대입정보 나침반</span>
+          <span class="row-file">compsss.html</span>
+        </span>
+        <span class="row-go">열기</span>
+      </a>
+
+      <a class="row" href="./2028gumsakgi.html">
+        <span class="row-main">
+          <span class="row-title">2028 검색기</span>
+          <span class="row-file">2028gumsakgi.html</span>
+        </span>
+        <span class="row-go">열기</span>
+      </a>
+    </div>
+
+    <footer>
+      새 파일을 추가하면 위 목록에 한 줄만 추가하면 됩니다.<br>
+      &lt;a class="row" href="./파일명.html"&gt;&lt;span class="row-main"&gt;&lt;span class="row-title"&gt;표시할 이름&lt;/span&gt;&lt;span class="row-file"&gt;파일명.html&lt;/span&gt;&lt;/span&gt;&lt;span class="row-go"&gt;열기&lt;/span&gt;&lt;/a&gt;
+    </footer>
+  </div>
+</body>
+</html>
